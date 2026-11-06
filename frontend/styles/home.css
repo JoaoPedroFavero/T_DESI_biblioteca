@@ -1,0 +1,120 @@
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    margin: 0;
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    font-family: "Lora", serif;
+}
+
+.cabecalho-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.texto-logo h1, h4{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 5px 5px 5px;
+}
+.texto-logo h1{
+    font-size: 22px;
+    color: #23362E;
+}
+
+.texto-logo h4{
+    font-size: 10px;
+    color: #356B50;
+}
+
+#back-img-logo{
+    background-color: #356B50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#book-logo-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 32px;
+    max-height: 32px;
+    
+}
+
+.navegacao {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    gap: 1rem;
+    
+}
+.navegacao a{
+    display: flex;
+    text-decoration: none;
+    color: #69766D;
+    cursor: pointer;
+    
+    &:hover{
+        color: #23362E
+    }
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+    margin: 5px 5px 5px 10px;
+}
+
+#back-usuario-img{
+    background-color: #EAF2EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#usuario-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 32px;
+    max-height: 32px;
+}
+
+#btn-flecha-usuario{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* CORPO DA HOME */
+
+main{
+    background-color: #F7F8F5;
+    display: flex;
+
+}
