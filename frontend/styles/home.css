@@ -22,6 +22,7 @@ header{
     justify-content: space-between;
     padding: 15px;
     width: 100%;
+    box-shadow: 0px 0px 2px black;
 }
 
 .logo{
@@ -61,6 +62,7 @@ header{
     justify-content: center;
     max-width: 32px;
     max-height: 32px;
+    filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(270deg) brightness(103%) contrast(105%);
     
 }
 
@@ -112,9 +114,198 @@ header{
 }
 
 /* CORPO DA HOME */
-
 main{
     background-color: #F7F8F5;
     display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* container principal */
+
+.container-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.container-principal-esq{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 15px;
+    
+}
+
+#titulo-biblioteca{
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: #356B50;
+}
+
+#titulo-card{
+    font-family: "Lora", sans-serif;
+    font-size: 52px;
+    max-width: 20ch;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+    color: #23362E;
+}
+
+#texto-card{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    max-width: 57ch;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+    color: #69766D;
+}
+
+#botoes-card{
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    gap: 1.5rem;
+}
+#botoes-card button{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    border-radius: 7px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover{
+        filter: brightness(0.85);
+    }
+}
+
+#seta-esq-img{
+    display: flex;
+    max-width: 16px;
+    max-height: 16px;
+    filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(270deg) brightness(103%) contrast(105%); /* Muda pra branco */
+}
+
+#btn-acessar{
+    background-color: #356B50;
+    color: white;
+}
+
+#btn-ver-livros{
+    background-color: white;
+    color: #23362E;
+    box-shadow: 0px 0px 2px#23362E;
+}
+
+.container-principal-dir{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#biblioteca-img{
+    width: 40rem;
+    border: none;
+    border-radius: 3%;
+}
+
+/* boxes de navegação da main */
+
+.container-secundario{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.mini-container-texto{
+    margin: 0px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.mini-container-texto h1{
+    font-family: "Lora", sans-serif;
+    font-weight: normal;
+    color: #23362E;
+}
+
+.mini-container-texto p{
+    font-family: "Inter", sans-serif;
+    color: #69766D;
+}
+
+.mini-container-boxes{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px #69766D;
+    padding: 10px;
+}
+
+#box-1, #box-2, #box-3{
+    height: 12rem;
+    width: 24rem;
+
+    .box-icon{
+        padding-top: 10px;
+        width: 32px;
+        height: 32px;
+        filter: invert(34%) sepia(35%) saturate(501%) hue-rotate(98deg) brightness(97%) contrast(93%);
+    }
+
+    h1{
+        font-family: "Inter", sans-serif;
+        font-size: 17px;
+        color: #23362E;
+    }
+
+    p{
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        color: #69766D;
+    }
+
+    .link-box{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10px;
+
+        &:hover{
+            filter: brightness(0.65);
+        }
+    }
+
+    .link-icon{
+        width: 12px;
+        height: 12px;
+        filter: invert(34%) sepia(35%) saturate(501%) hue-rotate(98deg) brightness(97%) contrast(93%);
+    }
+
+    a{
+        font-family: "Inter", sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        text-decoration: none;
+        color: #356B50;
+        width: 100%;
+    }
 
 }
+

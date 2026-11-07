@@ -51,3 +51,6 @@ https://www.figma.com/design/Ge7WMueERT9dV7SZXD3mNp/Sem-t%C3%ADtulo?node-id=0-1&
 
 #### icones
 https://www.flaticon.com/search?word=arrow
+
+#### conversor de HEX pra filter (colorir pngs)
+https://codepen.io/sosuke/pen/Pjoqqp
