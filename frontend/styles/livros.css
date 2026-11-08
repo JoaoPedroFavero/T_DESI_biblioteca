@@ -1,0 +1,10 @@
+@import url(../layouts/header.css);
+@import url(../layouts/footer.css);
+
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+

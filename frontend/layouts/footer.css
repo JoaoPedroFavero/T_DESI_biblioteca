@@ -1,0 +1,15 @@
+footer{
+    height: 35px;
+    background-color: #F7F8F5;
+    padding: 20px;
+    display: flex;
+
+    p{
+        margin: 10px;
+        font-family: "Inter", sans-serif;
+        color: #69766D;
+        padding-left: 25px;
+    }
+
+    box-shadow: inset 0px 0px 5px #E1E7E0;
+}

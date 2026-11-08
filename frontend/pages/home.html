@@ -6,33 +6,12 @@
     <link rel="stylesheet" href="../styles/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="../scripts/layouts.js"></script>
     <title>Página inicial</title>
 </head>
 <body>
-    <header>
-        <div class="cabecalho-container">
-            <div class="logo">
-                <span id="back-img-logo"><img id="book-logo-img" src="../assets/book-logo.png" alt="logo-biblioteca-entrelinhas"></span>
-                <div class="texto-logo">
-                    <h1>entrelinhas</h1>
-                    <h4>BIBLIOTECA</h4>
-                </div>
-            </div>
-            <nav class="navegacao">
-                <a href="">Home</a>
-                <a href="">Usuário</a>
-                <a href="">Livros</a>
-                <a href="">Gêneros literários</a>
-                <a href="">Autores</a>
-                <a href="">Emprestimos</a>
-            </nav>
-            <div class="usuario">
-                <span id="back-usuario-img"><img id="usuario-img" src="../assets/usuario.png" alt="imagem-usuario"></span>
-                usuario
-                <span><button id="btn-flecha-usuario"><img src="../assets/flecha-baixo.png" alt="flecha-baixo"></button></span>
-            </div>
-        </div>
-    </header>
+    <div id="header"></div>
+    
     <main>
         <div class="container-principal">
             <div class="container-principal-esq">
@@ -102,10 +81,36 @@
 
             </div>
         </div>
-        <div>box 4 - de portas abertas</div>
+        <div class="container-terciario">
+            <div class="mini-container-primario">
+                <h1>Cultivar histórias é cultivar a mente humana!</h1>
+                <p>
+                    Um espaço para estudar, encontrar sua próxima leitura e compartilhar conhecimento. Se cadastre e nos conte sua história!
+                </p>
+            </div>
+
+            <div class="mini-container-secundario">
+                <div id="localidade">
+                    <span><img src="../assets/local.png" alt="localidade"></span>
+                    <p>Rua das letras, ABC - Valfenda, Imaginária</p>
+                </div>
+
+                <div id="email">
+                    <span><img src="../assets/e-mail.png" alt="email"></span>
+                    <p>contato@entrelinhas.org.br</p>
+                </div>
+            </div>
+
+            <div class="mini-container-terciario">
+                <a href="">Conheça o acervo</a>
+                <span><img src="../assets/flecha-topo-direita.png" alt="flecha-topo-direita"></span>
+            </div>
+        </div>
     </main>
     <footer>
-        <div></div>
+        <div >
+            <p>© 2026 Biblioteca Entrelinhas. Conhecimento que aproxima.</p>
+        </div>
     </footer>
     
 </body>
