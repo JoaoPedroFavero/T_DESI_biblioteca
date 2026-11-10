@@ -45,6 +45,28 @@ const listarLivrosPorId = async (req, res) => {
     }
 }
 
+const listarLivrosPorTitulo = async (req, res) => {
+    try{
+        const titulo = req.params.titulo;
+        const livro = await livrosModel.selecionarPorTitulo(titulo);
+
+        if(livro.length === 0){
+            return res.status(404).json({
+                message: `Nenhum livro com o titulo ${titulo} encontrado na biblioteca`
+            })
+        }
+
+        res.status(200).json({
+            livro
+        })
+
+    } catch (err){
+        res.status(500).json({
+            message: `Não foi possível realizar a busca. Erro interno do Servidor`
+        })
+    }
+}
+
 const cadastrarLivro = async (req, res) => {
     const {titulo, isbn, ano_publicacao, numero_paginas, sinopse} = req.body
     try{
@@ -196,6 +218,7 @@ const deletarLivro = async (req, res) => {
 module.exports = {
     listarLivros,
     listarLivrosPorId,
+    listarLivrosPorTitulo,
     cadastrarLivro,
     editarLivro,
     deletarLivro

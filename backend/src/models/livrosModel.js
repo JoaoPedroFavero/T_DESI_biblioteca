@@ -19,6 +19,15 @@ const selecionarPorId = async(id) => {
     return resultado;
 }
 
+const selecionarPorTitulo = async(titulo) => {
+    const [resultado] = await db.query(
+        "SELECT * FROM livros WHERE titulo = ?",
+        [titulo]
+    );
+
+    return resultado;
+}
+
 const criar = async(titulo, isbn, ano_publicacao, numero_paginas, sinopse) => {
     const [resultado] = await db.query(
         "INSERT INTO livros (titulo, isbn, ano_publicacao, numero_paginas, sinopse) VALUES (?, ?, ?, ?, ?)",
@@ -63,6 +72,7 @@ const deletar = async(id) => {
 module.exports = {
     selecionarTodos,
     selecionarPorId,
+    selecionarPorTitulo,
     criar,
     editar,
     deletar

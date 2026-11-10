@@ -8,6 +8,7 @@ const livrosController = require(`../controllers/livrosController`);
 //GET
 router.get(`/todos`, livrosController.listarLivros);
 router.get(`/id/:id`, livrosController.listarLivrosPorId);
+router.get(`/titulo/:titulo`, livrosController.listarLivrosPorTitulo);
 
 //POST
 router.post(`/cadastrar`, livrosController.cadastrarLivro);

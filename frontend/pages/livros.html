@@ -12,7 +12,83 @@
     <div id="header"></div>
 
     <main>
-        
+        <div class="container-titulo-cadastrar">
+            <div class="titulo-pagina">
+                <div class="hiperlinks-pagina">
+                    <a href="../pages/home.html">Home</a>
+                    <a href=""> / </a>
+                </div>
+
+                <h1 id="titulo">Livros</h1>
+                <p id="mini-texto">Cadastre novos livros e gerencie o acervo.</p>
+            </div>
+
+            <div class="cadastrar">
+                <span><img id="mais-img" src="../assets/mais.png" alt="icone-mais"></span>
+                <button id="btn-cadastrar">Cadastrar</button>
+            </div>
+        </div>
+
+        <div class="container-boxes">
+            <div class="box">
+                <span><img src="../assets/quantidade.png" alt="icone-quantidade"></span>
+                <div>
+                    <h1>328</h1>
+                    <p>Livros cadastrados</p>
+                </div>
+            </div>
+
+           <div class="box">
+                <span><img src="../assets/check-mark.png" alt="icone-check-mark"></span>
+                <div>
+                    <h1>300</h1>
+                    <p>Disponiveis para emprestimo</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <span><img src="../assets/prancheta.png" alt="icone prancheta"></span>
+                <div>
+                    <h1>28</h1>
+                    <p>Exemplares emprestados</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-tabela">
+            <div class="cabecalho-tabela">
+                <div id="titulo-tabela">
+                    <h4>Acervo da biblioteca</h4>
+                </div>
+
+                <div class="lado-direito">                    
+                    <div id="filtro-tabela">
+                        <span><img id="lupa-img" src="../assets/lupa.png" alt="icone-lupa"></span><input type="text" placeholder="Buscar por titulo, codigo ou autor">
+                    </div>
+                    <div id="select-tabela">
+                        <select>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>    
+            </div>
+
+           <table class="tabela-dados">
+                <thead class="cabecalho-tabela">
+                    <tr>
+                        <th>Livro</th>
+                        <th>Autor</th>
+                        <th>Gênero</th>
+                        <th>Publicação</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="corpo-tabela">
+
+                </tbody>
+           </table>
+
+        </div>
     </main>
 
     <div id="footer"></div>
