@@ -12,9 +12,9 @@ const listarLivros = async (req, res) => {
             });
         }
 
-        res.status(200).json({
+        res.status(200).json(
             livros
-        });
+        );
 
     }catch (err){
         res.status(500).json({

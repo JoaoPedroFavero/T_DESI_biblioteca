@@ -5,13 +5,15 @@
   "license": "ISC",
   "author": "joao_pedro_favero",
   "type": "commonjs",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cor": "^0.0.0",
+    "cors": "^2.8.6",
     "dotenv": "^18.0.4",
     "express": "^5.2.1",
     "isbn3": "^2.0.11",

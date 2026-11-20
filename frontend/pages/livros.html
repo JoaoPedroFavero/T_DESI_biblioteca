@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <script src="../scripts/layouts.js"></script>
+    <script src="../scripts/integracao.js" defer></script>
 </head>
 <body>
     <div id="header"></div>
@@ -83,10 +84,12 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody class="corpo-tabela">
-
+                <tbody id="listaLivros">
+                    <tr><td colspan="5"></td></tr>
                 </tbody>
            </table>
+
+           <p id="mensagem"></p>
 
         </div>
     </main>
