@@ -21,7 +21,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
+    margin: 10px 20px 10px 20px;
 }
 
 .titulo-pagina{
@@ -96,16 +96,17 @@ main{
 .container-boxes{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 10px 20px 10px 20px;
     padding: 25px;
 }
 
 .box{
     padding: 10px;
     display: flex;
-    align-items: baseline;
+    align-items: start;
     background-color: white;
-    width: 20rem;
+    width: 22rem;
+    height: 7rem;
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 4px #E1E7E0;
@@ -113,18 +114,20 @@ main{
     span{
         background-color: #EAF2EB;
         border-radius: 5px;
-        height: 30px;
-        width: 30px;
+        height: 50px;
+        width: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         box-shadow: 0px 0px 2px #69766D;
+        margin-right: 15px;
+        margin: 7px;
 
     }
 
     img{
-        height: 25px;
-        width: 25px;
+        height: 40px;
+        width: 40px;
         filter: invert(18%) sepia(41%) saturate(288%) hue-rotate(103deg) brightness(92%) contrast(95%);
         border-radius: 10px;
     }
@@ -143,7 +146,7 @@ main{
     }
 }
 
-/* CONTAINER TABELA */
+/* CONTAINER TABELA - SUPERIOR */
 .container-tabela{
     background-color: white;
     border: none;
@@ -151,6 +154,7 @@ main{
     margin: 20px 45px 20px 45px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 0px 5px #E1E7E0;
 }
 
 .cabecalho-tabela{
@@ -169,11 +173,11 @@ main{
 }
 
 #filtro-tabela{
-    height: 2rem;
+    height: 2.5rem;
     width: 17rem;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px #E1E7E0;
+    box-shadow: 0px 0px 2px #69766D;
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -201,4 +205,79 @@ main{
 .tabela-dados{
     width: 100%;
     background-color: #F7F8F5;
+    border: none;
+    border-collapse: collapse;
+}
+
+.select-generos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #69766D;
+    padding: 6px;
+    cursor: pointer;
+}
+
+#seletor-img{
+    height: 20px;
+    width: 20px;
+    filter: invert(19%) sepia(17%) saturate(650%) hue-rotate(103deg) brightness(92%) contrast(96%);
+}
+
+.box-select-generos{
+    border: none;
+    margin: 5px;
+    outline: none;
+    font-family: "Inter", sans-serif;
+    color: #23362E;
+    cursor: pointer;
+}
+
+/* CONTAINER TABELA - CABEÇALHO DADOS */
+th, td {
+  text-align: left;
+  padding: 25px;
+  border-collapse: collapse;
+  border: none;
+}
+
+
+.cabecalho-dados{
+    th{
+        padding: 10px;
+        font-family: "Inter", sans-serif;
+        font-weight: normal;
+        color: #23362E;
+    }
+}
+
+#lista-livros{
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border: none;
+}
+
+#acoes-imgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#pontos-img, #editar-img{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    filter: invert(19%) sepia(7%) saturate(1589%) hue-rotate(102deg) brightness(87%) contrast(93%);
+
+    &:hover{
+        filter: opacity(0.85);
+        background-color: #E1E7E0;
+    }
 }

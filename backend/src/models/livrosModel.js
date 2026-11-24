@@ -4,7 +4,15 @@ const db = require(`../config/db`);
 
 const selecionarTodos = async() => {
     const [resultado] = await db.query(
-       "SELECT * FROM livros" 
+       `SELECT l.*, g.nome as genero, a.nome_completo as autor FROM livros as l
+       INNER JOIN autores_livros as al
+        ON l.id = al.livro_id
+       INNER JOIN autores as a
+        ON al.autor_id = a.id
+       INNER JOIN livros_generos as lg
+        ON l.id = lg.livro_id
+       INNER JOIN generos as g
+        ON lg.genero_id = g.id`
     );
 
     return resultado;
@@ -12,7 +20,15 @@ const selecionarTodos = async() => {
 
 const selecionarPorId = async(id) => {
     const [resultado] = await db.query(
-        "SELECT * FROM livros WHERE id = ?",
+        `SELECT l.*, g.nome as genero, a.nome_completo as autor FROM livros as l
+       INNER JOIN autores_livros as al
+        ON l.id = al.livro_id
+       INNER JOIN autores as a
+        ON al.autor_id = a.id
+       INNER JOIN livros_generos as lg
+        ON l.id = lg.livro_id
+       INNER JOIN generos as g
+        ON lg.genero_id = g.id WHERE l.id = ?`,
         [id]
     );
 

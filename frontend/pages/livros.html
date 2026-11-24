@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <script src="../scripts/layouts.js"></script>
-    <script src="../scripts/integracao.js" defer></script>
+    <script src="../scripts/integracaoLivros.js" defer></script>
 </head>
 <body>
     <div id="header"></div>
@@ -18,6 +18,7 @@
                 <div class="hiperlinks-pagina">
                     <a href="../pages/home.html">Home</a>
                     <a href=""> / </a>
+                    <a href="../pages/livros.html">Livros</a>
                 </div>
 
                 <h1 id="titulo">Livros</h1>
@@ -66,25 +67,30 @@
                     <div id="filtro-tabela">
                         <span><img id="lupa-img" src="../assets/lupa.png" alt="icone-lupa"></span><input type="text" placeholder="Buscar por titulo, codigo ou autor">
                     </div>
-                    <div id="select-tabela">
-                        <select>
-                            <option value=""></option>
+
+                    <div class="select-generos">
+                        <span><img id="seletor-img" src="../assets/seletor.png" alt="icone-seletor"></span>
+                        <select class="box-select-generos">
+                            <option value="">Todos os gêneros</option>
+                            <div id="select-generos"></div>
                         </select>
                     </div>
+                    
                 </div>    
             </div>
 
            <table class="tabela-dados">
-                <thead class="cabecalho-tabela">
+                <thead class="cabecalho-dados">
                     <tr>
-                        <th>Livro</th>
-                        <th>Autor</th>
-                        <th>Gênero</th>
-                        <th>Publicação</th>
-                        <th>Ações</th>
+                        <th>ID</th>
+                        <th>LIVRO</th>
+                        <th>AUTOR</th>
+                        <th>GÊNERO</th>
+                        <th>PUBLICAÇÃO</th>
+                        <th>AÇÕES</th>
                     </tr>
                 </thead>
-                <tbody id="listaLivros">
+                <tbody id="lista-livros">
                     <tr><td colspan="5"></td></tr>
                 </tbody>
            </table>

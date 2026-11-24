@@ -1,18 +1,17 @@
 const API_URL = "http://localhost:3001";
 const mensagem = document.getElementById("mensagem");
-const listaLivros = document.getElementById("listaLivros");
+const listaLivros = document.getElementById("lista-livros");
+const selectGeneros = document.getElementById("select-generos");
 
 const mostrarMensagem = async(texto, erro = false) => {
     mensagem.textContent = texto;
     mensagem.textContent = erro ? erro : "sucesso";
+    console.log(texto);
 }
 
 const listarLivros = async() => {
-    console.log(`Entrei na função`)
     try {
-        console.log(`antes de fazer o fetch`)
         const response = await fetch(`${API_URL}/livros/todos`);
-        console.log(`Entrei no try e puxei a response`);
 
         if(!response.ok){
             throw new Error(`Erro ao buscar os livros`);
@@ -20,7 +19,6 @@ const listarLivros = async() => {
 
         const livros = await response.json();
         listaLivros.innerHTML = "";
-        console.log(livros);
 
         if(livros.length === 0){
             listaLivros.innerHTML = `
@@ -33,23 +31,44 @@ const listarLivros = async() => {
 
         livros.forEach((livro) => {
             listaLivros.innerHTML += `
-                <tr>
+                <tr class="dados">
                     <td>${livro.id}</td>
                     <td>${livro.titulo}</td>
-                    <td>${livro.isbn}</td>
+                    <td>${livro.autor}</td>
+                    <td>${livro.genero}</td>
                     <td>${livro.ano_publicacao}</td>
-                    <td>${livro.numero_paginas}</td>
-                    <td></td>
+                    <td id="acoes-imgs"><img id="editar-img" src="../assets/editar.png" alt="icone editar"><img id="pontos-img" src="../assets/3-pontinhos.png" alt="icone 3 pontinhos"></td>
                 </tr>
             `
         });
         
     } catch(erro){
-        console.log(`Estou no catch...`)
-        console.log(erro);
         mostrarMensagem(erro, true);
     }
 }
 
+const listarGeneros = async() => {
+    try {
+        const response = await fetch(`${API_URL}/generos/todos`);
+
+        if(!response.ok){
+            throw new Error(`Erro ao buscar os gêneros`);
+        }
+
+        const generos = await response.json();
+        selectGeneros.innerHTML = "";
+
+        generos.forEach((genero) => {
+            selectGeneros.innerHTML += `
+                <option value="${genero.id}">${genero.nome}</option>
+            `;
+        });
+
+    } catch(erro){
+        mostrarMensagem(erro, true);
+    }
+}
+
+listarGeneros();
 listarLivros();
 

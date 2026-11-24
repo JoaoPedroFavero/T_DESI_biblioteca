@@ -1,0 +1,283 @@
+@import url(../layouts/header.css);
+@import url(../layouts/footer.css);
+
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+main{
+    background-color: #F7F8F5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTAINER TITULO + BTN CADASTRAR */
+
+.container-titulo-cadastrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px 10px 20px;
+}
+
+.titulo-pagina{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    
+}
+
+.hiperlinks-pagina a{
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    color: #69766D;
+    text-decoration: none;
+}
+
+.titulo-pagina h1{
+    font-family: "Lora", sans-serif;
+    font-weight: normal;
+    color: #23362E;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.titulo-pagina p{
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    color: #69766D;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cadastrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #23362E;
+    width: 7rem;
+    height: 2.5rem;
+    cursor: pointer;
+    margin: 25px;
+
+    &:hover{
+        filter: brightness(0.75);
+    }
+
+    border-radius: 7px;
+    
+}
+
+#mais-img{
+    height: 12px;
+    width: 12px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.cadastrar button{
+    border: none;
+    background-color: #23362E;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    padding: 0;
+    padding-left: 6px;
+    cursor: pointer;
+
+}
+
+
+/* CONTAINER BOXES */
+
+.container-boxes{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px 10px 20px;
+    padding: 25px;
+}
+
+.box{
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    background-color: white;
+    width: 22rem;
+    height: 7rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #E1E7E0;
+
+    span{
+        background-color: #EAF2EB;
+        border-radius: 5px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 2px #69766D;
+        margin-right: 15px;
+        margin: 7px;
+
+    }
+
+    img{
+        height: 40px;
+        width: 40px;
+        filter: invert(18%) sepia(41%) saturate(288%) hue-rotate(103deg) brightness(92%) contrast(95%);
+        border-radius: 10px;
+    }
+
+    h1{
+        margin: 5px;
+        font-family: "Inter", sans-serif;
+        font-size: 26px;
+    }
+
+    p{
+        margin: 5px;
+        font-family: "Inter", sans-serif;
+        font-size: 13px;
+
+    }
+}
+
+/* CONTAINER TABELA - SUPERIOR */
+.container-tabela{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 45px 20px 45px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #E1E7E0;
+}
+
+.cabecalho-tabela{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#titulo-tabela h4{
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #23362E;
+    justify-content: start;
+}
+
+#filtro-tabela{
+    height: 2.5rem;
+    width: 17rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #69766D;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#filtro-tabela input{
+    border: none;
+    outline: none;
+    width: 17rem;
+}
+
+#lupa-img{
+    height: 14px;
+    width: 14px;
+
+}
+
+.lado-direito{
+    display: flex;
+    align-items: center;
+
+}
+
+.tabela-dados{
+    width: 100%;
+    background-color: #F7F8F5;
+    border: none;
+    border-collapse: collapse;
+}
+
+.select-generos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #69766D;
+    padding: 6px;
+    cursor: pointer;
+}
+
+#seletor-img{
+    height: 20px;
+    width: 20px;
+    filter: invert(19%) sepia(17%) saturate(650%) hue-rotate(103deg) brightness(92%) contrast(96%);
+}
+
+.box-select-generos{
+    border: none;
+    margin: 5px;
+    outline: none;
+    font-family: "Inter", sans-serif;
+    color: #23362E;
+    cursor: pointer;
+}
+
+/* CONTAINER TABELA - CABEÇALHO DADOS */
+th, td {
+  text-align: left;
+  padding: 25px;
+  border-collapse: collapse;
+  border: none;
+}
+
+
+.cabecalho-dados{
+    th{
+        padding: 10px;
+        font-family: "Inter", sans-serif;
+        font-weight: normal;
+        color: #23362E;
+    }
+}
+
+#lista-livros{
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border: none;
+}
+
+#acoes-imgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#pontos-img, #editar-img{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    filter: invert(19%) sepia(7%) saturate(1589%) hue-rotate(102deg) brightness(87%) contrast(93%);
+
+    &:hover{
+        filter: opacity(0.85);
+        background-color: #E1E7E0;
+    }
+}

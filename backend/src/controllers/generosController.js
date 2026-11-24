@@ -12,9 +12,9 @@ const listarGeneros = async (req, res) => {
             });
         }
 
-        res.status(200).json({
+        res.status(200).json(
             generos
-        });
+        );
 
     }catch(err){
         res.status(500).json({
@@ -34,9 +34,9 @@ const listarGenerosPorId = async (req, res) => {
             });
         }
 
-        res.status(200).json({
+        res.status(200).json(
             genero
-        });
+        );
 
     }catch (err){
         res.status(500).json({
